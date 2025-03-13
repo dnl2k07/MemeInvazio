@@ -1,0 +1,56 @@
+:root{
+    --greencolor: #17BD3E;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 3rem;
+}
+.tarolo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+.focim {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.focim_zold {
+    color: var(--greencolor);
+}
+.login{
+    background-color: var(--greencolor);
+}
+.login, .reg {
+    border-radius: 20px;
+    padding: 15px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.login button{
+    font-size: 1.5rem;
+    color: white;
+    background-color: inherit;
+    border: none;
+}
+.reg button{
+    color: var(--greencolor);
+    background-color: white;
+}
+.login button, .reg button{
+    font-size: 1.5rem;
+    border: none;
+    cursor: inherit;
+}
