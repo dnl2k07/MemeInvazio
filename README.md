@@ -1,1 +1,1 @@
-Memeinvázió :thumbs_up:
+memeinvázió frontend kódjának fejlesztése
