@@ -1,0 +1,184 @@
+/* alap beállítások */
+:root {
+    --text-color: #17BD3E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: silver;
+}
+
+/* ----- a fejléc a menüvel ----- */
+header {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 1.875rem;
+}
+
+.menu-logo {
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+.menu-logo-green {
+    color: var(--text-color);
+}
+
+/*  menü alapállapotban */
+nav {
+    display: flex;
+    gap: 2rem;
+    font-size: 2rem;
+    z-index: 1000;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: ease 500ms;
+}
+
+nav a:hover {
+    transform: scale(1.1);
+}
+
+.icon-home {
+    background-color: silver;
+}
+
+.icon-logout {
+    background-color: red;
+    color: white;
+}
+
+/* hamburger menü */
+.hamburger-menu {
+    background-color: white;
+    width: 30px;
+    height: 25px;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    background-color: black;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-toggle:checked~nav {
+    display: flex;
+}
+
+/* --- main div formázása --- */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px;
+}
+
+.newMeme {
+    height: 300px;
+    width: 500px;
+    /* border: 1px solid black; */
+    border-radius: 0.5rem;
+    background-image: url('../img/transparent.jpg');
+    position: relative;
+}
+
+.newMeme>label {
+    background-color: #62605C;
+    position: absolute;
+    top: 70%;
+    right: 5%;
+    color: white;
+    font-size: 1rem;
+    border-radius: 1.875rem;
+    padding: 0.6rem;
+    cursor: pointer;
+    transition: ease 0.5s;
+}
+
+.newMeme>label:hover {
+    transform: scale(1.1);
+}
+
+.newMeme>input {
+    display: none;
+}
+
+.uploadButton {
+    background-color: var(--text-color);
+    width: 500px;
+    padding: 15px;
+    border-radius: 1.25rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: ease 0.5s;
+}
+
+.uploadButton:hover {
+    transform: scale(1.01);
+}
+
+.uploadButton>button {
+    font-size: 1.5rem;
+    color: white;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+/* --- hamburger menü, plus gomb 768px-től --- */
+@media screen and (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    nav {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        background-color: white;
+        padding: 10px;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        font-size: 1.5rem;
+        display: none;
+    }
+
+    .newMeme,
+    .uploadButton {
+        width: 350px;
+    }
+}
